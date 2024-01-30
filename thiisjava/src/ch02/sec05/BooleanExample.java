@@ -7,7 +7,7 @@ public class BooleanExample {
 			System.out.println("중지합니다.");
 		} else {
 			System.out.println("시작합니다."); 
-		}
+		}   
 		
 		int x = 10;
 		boolean result1 = (x == 20);
