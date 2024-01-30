@@ -8,20 +8,19 @@ public class MyNameAndAge {
 
         System.out.println("이름: ");
         String name = scanner.nextLine();
-        String strY = scanner.nextLine();
-        int age = Integer.parseInt(strY);
 
         if (name.equals("이윤지")) {
-        	System.out.println("나이: ");          
-        } else {
-        	System.out.println("틀렸습니다.");
-        }
-        
-        if(age == 28) {
-        	System.out.println("정답입니다.");
-        } else {
-        	System.out.println("틀렸습니다.");
-        }
+            System.out.println("나이: ");
+            String strY = scanner.nextLine();
+            int age = Integer.parseInt(strY);
 
+            if (age == 28) {
+                System.out.println("정답입니다.");
+            } else {
+                System.out.println("틀렸습니다.");
+            }
+        } else {
+            System.out.println("틀렸습니다.");
+        }
     }
 }
