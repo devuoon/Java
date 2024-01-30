@@ -1,13 +1,13 @@
 package ch02.sec13;
 
-import java.util.Scanner;
+import java.util.Scanner;   // 단축키 ctrl + shift + o
 
 public class ScannerExample {
 	public static void main(String[] args) throws Exception {
 		Scanner scanner = new Scanner(System.in);
 		
 		System.out.print("x 값 입력: ");
-		String strX = scanner.nextLine();
+		String strX = scanner.nextLine();			// next()는 띄어쓰기 기준으로 출력
 		int x = Integer.parseInt(strX);
 		
 		System.out.print("y 값 입력: ");
