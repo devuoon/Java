@@ -14,7 +14,7 @@ public class MyNameAndAge {
                 System.out.println("틀렸습니다.");
                 break;
             }
-
+ 
             System.out.println("나이: ");
             String strY = scanner.nextLine();
             int age = Integer.parseInt(strY);
