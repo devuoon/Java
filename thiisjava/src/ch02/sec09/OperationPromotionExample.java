@@ -15,7 +15,7 @@ public class OperationPromotionExample {
 		long v5 = 1000L;
 		long result3 = v3 + v4 + v5;			//long 타입으로 변환 후 연산
 		System.out.println("result3: " + result3);
-		
+		  
 		char v6 = 'A';
 		char v7 = 1;
 		int result4 = v6 + v7; 					//int 타입으로 변환 후 연산
