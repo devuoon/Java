@@ -18,7 +18,7 @@ public class IncreaseDecreaseOperatorExample {
 		System.out.println("----------------------------");
 		z = x++;		// z = 12 , x = 13
 		System.out.println("z= " + z);
-		System.out.println("x= " + x);
+		System.out.println("x= " + x); 
 		
 		System.out.println("----------------------------");
 		z = ++x + y++;		// z = 22, x = 14, y = 9
