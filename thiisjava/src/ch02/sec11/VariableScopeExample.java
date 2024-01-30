@@ -8,7 +8,7 @@ public class VariableScopeExample {
 			System.out.println(v2);
 		}
 //		int v3 = v1 + v2 + 5;			//v2 변수를 사용할 수 없기 때문에 컴파일 에러 발생
-		   
+		    
 	}
 	
 }
