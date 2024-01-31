@@ -13,5 +13,7 @@ public class AssignmentOperatorExample {
 		System.out.println("result= " + result);
 		result %= 3;
 		System.out.println("result= " + result);
-	}
 }    
+
+}
+
