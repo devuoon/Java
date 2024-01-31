@@ -5,12 +5,12 @@ public class InfinityAndNaNCheckExample {
 		int x = 5;
 		double y = 0.0;
 		double z = x / y;
-		double z1 = x % y;
+//		double z1 = x % y;
 		
 		//잘못된 코드
-		System.out.println(z);
-		System.out.println(z1);
-		System.out.println(z + 2);
+//		System.out.println(z);
+//		System.out.println(z1);
+//		System.out.println(z + 2);
 		
 		//알맞은 코드
 		if(Double.isInfinite(z) || Double.isNaN(z)) {
