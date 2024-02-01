@@ -23,7 +23,8 @@ public class KeyControlExample {
 				speed--;
 				System.out.println("현재 속도 = " + speed);
 			} else if (strNum.equals("3")) {
-				run = false;
+//				run = false;
+				break;
 			}
 		}
 		
