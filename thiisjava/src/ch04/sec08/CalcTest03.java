@@ -32,9 +32,7 @@ public class CalcTest03 {
 
 			if (quit.equals("q")) {
 				break;
-			} else {
-				continue;
-			}
+			} 
 		}
 		System.out.print("종료합니다.");
 	}
