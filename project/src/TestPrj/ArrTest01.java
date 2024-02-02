@@ -6,7 +6,7 @@ public class ArrTest01 {
 			System.out.println("a[" + i + "] :" + a[i]);
 		}
 	}
-	
+	 
 	public static void main(String[] args) {
 
 		int[] ary = { 10, 20, 30, 40, 50 }; // 배열선언과 동시에 초기화

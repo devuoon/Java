@@ -23,7 +23,7 @@ public class CalcTest04 {
 		System.out.print("두 번째 숫자: ");
 		int num2 = sc.nextInt();
 		sc.nextLine();
-		
+		 
 		System.out.println("연산자를 입력하세요.");
 		String str1 = sc.nextLine();
 		
