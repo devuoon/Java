@@ -6,10 +6,20 @@ public class AdvacedForExample {
 		int[] scores = { 95, 71, 84, 93, 87 };
 		//배열 항목 전체 합 구하기
 		int sum = 0;
-		for (int score : scores) {
-			sum = sum + score;
+		
+		// for문 2가지 구조
+		//1번
+//		for (int score : scores) {
+//			sum = sum + score;
+//		}
+		
+		//2번
+		for (int i=0; i<scores.length; i++) {
+			sum += scores[i];
 		}
+		
 		System.out.println("점수 총합 = " + sum);
+		
 		//배열 항목 전체 평균 구하기
 		double avg = (double) sum / scores.length;
 		System.out.println("점수 평균 = " + avg);
