@@ -17,7 +17,6 @@ class CarThree{
 		this.carYear = carYear;
 		System.out.println("나는 매개변수 세개를 갖는 생성자입니다.");
 	}
-
 }
 
 public class CreateCarThree {
