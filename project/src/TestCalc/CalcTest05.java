@@ -12,27 +12,21 @@ public class CalcTest05 {
 	
 	int plus() {
 		int result = x + y;
-		System.out.println("x + y : " + (x + y));
 		return result;
 	}
 	
 	int min() {
-		int result = x + y;
-		System.out.println("x - y : " + (x - y));
+		int result = x - y;
 		return result;
 	}
 	
 	int mul() {
 		int result = x * y;
-		System.out.println("x * y : " + x * y);
 		return result;
 	}
 	
 	int div() {
 		int result = x / y;
-		System.out.println("x / y : " + x / y);
 		return result;
 	}
-	
-	
 }
