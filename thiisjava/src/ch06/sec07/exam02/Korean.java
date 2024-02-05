@@ -11,4 +11,10 @@ public class Korean {
 		name = n;
 		ssn = s;
 	}
+	
+	public Korean() {		// default 생성자
+		int n = 100;		//지역변수
+		System.out.println("나는 디폴트 생성자 입니다.");
+		System.out.println("n : " + n);
+	}
 }
