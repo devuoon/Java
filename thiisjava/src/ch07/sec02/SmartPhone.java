@@ -4,10 +4,15 @@ public class SmartPhone extends Phone{
 	//필드 선언
 	public boolean wifi;
 	
-	//생성자 선언
+	//생성자 선언 (두개의 입력을 가지는 생성자)
 	public SmartPhone(String model, String color) {
 		this.model = model;
 		this.color = color;
+	}
+	
+	// default 생성자 
+	SmartPhone() {
+		System.out.println("나는 smartPhone의 (자식)생성자 입니다.");
 	}
 	
 	//메소드 선언

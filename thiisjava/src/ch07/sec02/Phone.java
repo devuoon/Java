@@ -5,6 +5,11 @@ public class Phone {
 	public String model;
 	public String color;
 	
+	
+	Phone() {
+		System.out.println("나는 phone클래스의 (부모)생성자 입니다.");
+	}
+	
 	//메소드 선언
 	public void bell() {
 		System.out.println("벨이 울립니다.");
