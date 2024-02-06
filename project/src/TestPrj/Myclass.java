@@ -8,7 +8,7 @@ public class Myclass {
 		int b = 20;
 		double x = 1.2;
 		double y = 2.4;
-		
+		 
 		plus(a, b);
 		plus(x, y);
 		plus(a);
