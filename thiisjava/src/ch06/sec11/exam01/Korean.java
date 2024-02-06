@@ -8,6 +8,7 @@ public class Korean {
 	//인스턴스 필드 선언
 	String name;
 	
+
 	//생성자 선언
 	public Korean(String ssn, String name) {
 		this.ssn = ssn;
