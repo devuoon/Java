@@ -18,6 +18,8 @@ public class KoreanExample {
 		//비 final 필드는 값 변경 가능
 		k1.name = "박자바";
 		System.out.println(k1.name);
+		
+		System.out.println(k1.toString());
 				
 	}
 
