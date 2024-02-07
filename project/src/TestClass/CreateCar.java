@@ -1,6 +1,5 @@
 package TestClass;
 
-import TestShape.Car;
 
 class Car {
 	String modeName;			// 멤버 변수 == 필드 == 속성
