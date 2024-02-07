@@ -22,5 +22,4 @@ public class ChildExample {
 		child.field2 = "data2";		//(가능)
 		child.method3();				//(가능)
 	}
-
 }
