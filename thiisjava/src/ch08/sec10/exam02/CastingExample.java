@@ -15,5 +15,4 @@ public class CastingExample {
 		bus.run();
 		bus.checkFare();
 	}
-
 }
