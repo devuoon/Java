@@ -6,8 +6,8 @@ public interface RemoteControl {
 	int MIN_VOLUME = 0;
 	
 	//추상 메소드
-	void tunrOn();
-	void tunrOff();
+	void turnOn();
+	void turnOff();
 	void setVolume(int volume);
 	
 	//디폴트 메소드
