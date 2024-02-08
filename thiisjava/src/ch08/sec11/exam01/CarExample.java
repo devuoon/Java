@@ -16,5 +16,4 @@ public class CarExample {
 		//run() 메소드 실행(다형성 : 실행 결과가 다름)
 		myCar.run();
 	}
-
 }
