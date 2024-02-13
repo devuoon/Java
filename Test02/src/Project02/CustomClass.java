@@ -19,7 +19,7 @@ public class CustomClass {
 	}
 	
 	void addToCart(ProductClass product, int quantity) {
-		product.checkQty(quantity);
+		boolean isOk = product.checkQty(quantity);
 	}
 
 //	public void addToCart(ProductClass product, int quantity) {
