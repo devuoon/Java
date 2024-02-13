@@ -13,13 +13,23 @@ public class CustomClass {
 		this.age = age;
 		basket = new ProductClass[range];
 	}
-	
+
 	public void customInfo() {
 		System.out.printf("회원번호 : %d, 회원이름 : %s, 나이 : %d \n", id, name, age);
 	}
-	
+
 	void addToCart(ProductClass product, int quantity) {
 		boolean isOk = product.checkQty(quantity);
+		if (!isOk) {
+			System.out.printf("수량이 부족합니다. 구입 가능 수량은 %d 입니다.", product.quantity);
+			System.out.println();
+		} else {			//구입가능
+			basket [this.basketSize] = product;
+			this.basketSize++;
+			product.quantity = quantity; // 재고수량 = 재고수량 - 구입수량
+			System.out.printf("나이가 %d 인 %s가 %d원짜리 %s를 %d개 장바구니에 담았습니다.", age, name, product.price, product.name, product.quantity);
+			System.out.println();
+		}
 	}
 
 //	public void addToCart(ProductClass product, int quantity) {

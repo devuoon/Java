@@ -22,18 +22,18 @@ public class ExecClass {
 
 		System.out.println("=========== 주문 전 상품 정보 ===========");
 		p1.productInfo();
-		p2.productInfo();
-		p3.productInfo();
-		p4.productInfo();
-		p5.productInfo();
+//		p2.productInfo();
+//		p3.productInfo();
+//		p4.productInfo();
+//		p5.productInfo();
 		System.out.println();
 
 		/* c1 고객 장바구니에 상품을 담는다 */
 		c1.addToCart(p1, 1);
-		c1.addToCart(p2, 2);
-		c1.addToCart(p3, 2);
-		c1.addToCart(p4, 2);
-		c1.addToCart(p5, 2);
+//		c1.addToCart(p2, 2);
+//		c1.addToCart(p3, 2);
+//		c1.addToCart(p4, 2);
+//		c1.addToCart(p5, 2);
 
 		// 장바구니에 담은 후 최종 결제
 		c1.purchase();
@@ -41,10 +41,10 @@ public class ExecClass {
 
 		/* c2 고객 장바구니에 상품을 담는다 */
 		c2.addToCart(p1, 10);
-		c2.addToCart(p2, 20);
-		c2.addToCart(p3, 30);
-		c2.addToCart(p4, 40);
-		c2.addToCart(p5, 50);
+//		c2.addToCart(p2, 20);
+//		c2.addToCart(p3, 30);
+//		c2.addToCart(p4, 40);
+//		c2.addToCart(p5, 50);
 
 		// 장바구니에 담은 후 최종 결제
 		c2.purchase();
@@ -52,10 +52,10 @@ public class ExecClass {
 
 //	         c3 고객 장바구니에 상품을 담는다
 		c3.addToCart(p1, 10);
-		c3.addToCart(p2, 20);
-		c3.addToCart(p3, 30);
-		c3.addToCart(p4, 40);
-		c3.addToCart(p5, 50);
+//		c3.addToCart(p2, 20);
+//		c3.addToCart(p3, 30);
+//		c3.addToCart(p4, 40);
+//		c3.addToCart(p5, 50);
 
 		// 장바구니에 담은 후 최종 결제
 		c3.purchase();
@@ -64,9 +64,9 @@ public class ExecClass {
 		System.out.println();
 		System.out.println("=========== 주문 완료 후 상품 정보 ===========");
 		p1.productInfo();
-		p2.productInfo();
-		p3.productInfo();
-		p4.productInfo();
-		p5.productInfo();
+//		p2.productInfo();
+//		p3.productInfo();
+//		p4.productInfo();
+//		p5.productInfo();
 	}
 }
