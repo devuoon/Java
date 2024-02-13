@@ -17,8 +17,7 @@ public class ProductClass {
 		System.out.printf("상품명 : %s, 가격 : %d, 수량 : %d \n", name, price, quantity);
 	}
 	
-	boolean checkQty(int purchaseQty) {			// 구입가능한지 확인
+	boolean checkQty(int purchaseQty) {					// 구입가능한지 확인
 		return quantity >= purchaseQty ? true : false; 
-		
 	}
 }
