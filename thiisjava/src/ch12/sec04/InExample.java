@@ -16,6 +16,7 @@ public class InExample {
 				} else if(keyCode == 51) {
 					break;
 				}
+				
 				System.out.println("------------------------------------");
 				System.out.println("1. 증속 | 2. 감속 | 3. 중지");
 				System.out.println("------------------------------------");
