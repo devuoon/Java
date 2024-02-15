@@ -27,5 +27,4 @@ public class GenericExample {
 		//Course.registerCourse3(new Applicant<MiddleStudent>(new MiddleStudent()));
 		System.out.println();
 	}
-
 }
