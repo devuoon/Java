@@ -27,7 +27,7 @@ public class EBook extends Book{
 	    //배열을 문자열로 변환하는 메서드 오버라이딩
 	    @Override
 	    public String toString() {
-	        return super.toString() + "\n**호환 기기:** " + Arrays.toString(supperDevices);
+	        return super.toString() + " | 호환 기기: " + Arrays.toString(supperDevices);
 	    }
 
 	}
