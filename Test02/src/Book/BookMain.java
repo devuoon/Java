@@ -92,10 +92,10 @@ public class BookMain {
             String author = scanner.nextLine();
             System.out.print("가격: ");
             int price = Integer.parseInt(scanner.nextLine());  
-            System.out.print("엮은이: ");
+            System.out.print("출판사: ");
             String publisher = scanner.nextLine();
 
-           // books.add(new EBook(title, author, price, publisher));
+           books.add(new EBook(title, author, price, publisher));
             System.out.println("도서가 등록되었습니다.");
         }
 
