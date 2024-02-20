@@ -77,8 +77,10 @@ public class BookMain {
             int price = Integer.parseInt(scanner.nextLine());  // nextInt() 대신에 nextLine()을 사용하고 정수로 변환
             System.out.print("출판사: ");
             String publisher = scanner.nextLine();
-
-            books.add(new Book(title, author, price,publisher));
+            System.out.print("페이지 수: ");
+            int sizeInfo = scanner.nextInt();
+            
+            books.add(new PaperBook(title, author, price,publisher, sizeInfo));
             System.out.println("도서가 등록되었습니다.");
         }
 
