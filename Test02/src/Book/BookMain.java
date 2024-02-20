@@ -4,8 +4,10 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 public class BookMain {
-	// 입력을 위한 스캐너
+	// 도서목록을 저장하는 ArrayList
+	// ArrayList 타입의 books 변수를 선언하고 Book클래스의 객체를 담을 수 있도록 초기화
 	private static ArrayList<Book> books = new ArrayList<>();
+	//사용자로부터 입력을 받는 Scanner 객체
 	private static Scanner scanner = new Scanner(System.in);
 
 	public static void main(String[] args) {
@@ -77,25 +79,43 @@ public class BookMain {
 		System.out.print("출판사: ");
 		String publisher = scanner.nextLine();
 		System.out.print("페이지 수: ");
-		int sizeInfo = scanner.nextInt();
+		int size = scanner.nextInt();
 
-		books.add(new PaperBook(title, author, price, publisher, sizeInfo));
+		books.add(new PaperBook(title, author, price, publisher, size));
 		System.out.println("도서가 등록되었습니다.");
 	}
 
 	private static void addEBook() {
-		System.out.print("제목: ");
-		String title = scanner.nextLine();
-		System.out.print("저자: ");
-		String author = scanner.nextLine();
-		System.out.print("가격: ");
-		int price = Integer.parseInt(scanner.nextLine());
-		System.out.print("출판사: ");
-		String publisher = scanner.nextLine();
+	    System.out.print("제목: ");
+	    String title = scanner.nextLine();
+	    System.out.print("저자: ");
+	    String author = scanner.nextLine();
+	    System.out.print("가격: ");
+	    int price = Integer.parseInt(scanner.nextLine());
+	    System.out.print("출판사: ");
+	    String publisher = scanner.nextLine();
 
-		books.add(new EBook(title, author, price, publisher));
-		System.out.println("도서가 등록되었습니다.");
+	    // 호환 기기 목록 출력
+	    EBook eBook = new EBook(title, author, price, publisher); // 객체 생성
+
+	    // 선택된 기기 번호 입력 받기
+	    System.out.print("호환 기기 번호 입력 (1: 안드로이드, 2: 아이폰, 3: 태블릿): ");
+	    int selectedDeviceNumber = Integer.parseInt(scanner.nextLine());
+
+	    // 선택된 기기 설정
+	    String selectedDevice = eBook.getSupperDevices()[selectedDeviceNumber - 1];
+
+	    // 선택된 기기 저장
+	    eBook.setSelectedDevice(selectedDevice);
+
+	    // books 리스트에 EBook 추가
+	    books.add(eBook);
+
+	    System.out.println("도서가 등록되었습니다.");
 	}
+
+
+
 
 	// 도서 검색
 	private static void searchBook() {
@@ -113,18 +133,30 @@ public class BookMain {
 
 	// 도서 삭제
 	private static void deleteBook() {
-		System.out.print("삭제할 도서 제목을 입력하세요: "); // 삭제할 도서 제목 입력
-		String titleToDelete = scanner.nextLine();
+	    System.out.print("삭제할 도서 제목을 입력하세요: "); // 삭제할 도서 제목 입력
+	    String titleToDelete = scanner.nextLine();
 
-		int index = findBookIndex(titleToDelete);
+	    //도서를 찾았는지 여부를 나타내는 변수
+	    boolean found = false;
+	    
+	    //리스트를 역순으로 탐색하여 모든 동일한 제목의 도서를 삭제
+	    for (int i = books.size() - 1; i >= 0; i--) {
+	    	// 제목이 일치하는 도서를 찾은 경우
+	        if (books.get(i).getTitle().equals(titleToDelete)) {
+	        	// 해당 도서를 삭제
+	            books.remove(i);
+	            // 도서를 찾았을 때 true
+	            found = true;
+	        }
+	    }
 
-		if (index != -1) { // 인덱스가 존재하면 해당 인덱스의 책 삭제
-			books.remove(index);
-			System.out.println("도서가 삭제되었습니다.");
-		} else {
-			System.out.println("해당 도서를 찾을 수 없습니다.");
-		}
+	    if (found) {
+	        System.out.println("도서가 삭제되었습니다.");
+	    } else {
+	        System.out.println("해당 도서를 찾을 수 없습니다.");
+	    }
 	}
+
 
 	// 도서 확인
 	private static void confirmBook() {
@@ -141,7 +173,7 @@ public class BookMain {
 		int index = findBookIndex(title);
 
 		Book book = books.get(index);
-
+		
 		System.out.println(book.getTitle() + "을 구매했습니다.");
 		System.out.println("총 결제 금액은 : " + (book.getPrice() * book.getTax()) + "원입니다.");
 	}

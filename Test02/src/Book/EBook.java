@@ -8,6 +8,9 @@ public class EBook extends Book{
 
 		// 새로운 필드 추가 , 디바이스 목록을 저장하는 배열로 초기화
 	    private String[] supperDevices = {"안드로이드", "아이폰", "태블릿"};
+	    
+	    //선택된 기기를 저장할 변수
+	    private String selectedDevice;
 
 	    //book의 생성자를 호출한다.
 	    public EBook(String title, String author, int price, String publisher) {
@@ -18,6 +21,16 @@ public class EBook extends Book{
 	    public String[] getSupperDevices() {
 	        return supperDevices;
 	    }
+	    
+	    // 선택된 기기 설정
+	    public void setSelectedDevice(String selectedDevice) {
+	    	this.selectedDevice = selectedDevice;
+	    }
+	    
+	    //선택된 기기 반환
+	    public String getSelectedDevice() {
+	    	return selectedDevice;
+	    }
 
 	    //supperDevices필드의 값을 설정하는 setter메서드
 	    public void setSupperDevices(String[] supperDevices) {
@@ -27,7 +40,7 @@ public class EBook extends Book{
 	    //배열을 문자열로 변환하는 메서드 오버라이딩
 	    @Override
 	    public String toString() {
-	        return super.toString() + " | 호환 기기: " + Arrays.toString(supperDevices);
+	        return super.toString() + "| 호환 기기: " + selectedDevice;
 	    }
 
 	}

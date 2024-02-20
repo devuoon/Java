@@ -7,7 +7,7 @@ public class Book {
 	private String author; // 저자
 	private int price; // 가격
 	private String publisher; // 출판사
-	private float tax = 1.1f; // 세금 (초기값을 1.1f로 설정)
+	private final float tax = 1.1f; // 세금 (초기값을 1.1f로 설정)
 
 	// 매개변수를 받아 객체를 초기화하는 생성자 정의
 	// 객체를 생성할 때 전달된 매개변수로 멤버 변수들을 초기화
