@@ -37,9 +37,10 @@ public class ServerOne {
 					System.out.println("서버 소켓 생성");
 					
 					Socket clntSocket = serverSocket.accept();		// 클라이언트 소켓
-					System.out.println("클라이언트 소켓");
-					System.out.println("서버 소켓 종료");
-					serverSocket.close();
+					System.out.println("클라이언트 소켓 생성");
+					
+					clntSocket.close();
+					System.out.println("클라이언트 소켓 종료");
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
@@ -50,6 +51,11 @@ public class ServerOne {
     }
 
     static void stopServer() {
-
+    	try {
+    		System.out.println("서버 소켓 종료");
+			serverSocket.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
     }
 }
