@@ -1,5 +1,6 @@
 package com.tcp;
 
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -38,6 +39,11 @@ public class ServerOne {
 					
 					Socket clntSocket = serverSocket.accept();		// 클라이언트 소켓
 					System.out.println("클라이언트 소켓 생성");
+					
+					// 서버가 클라이언트로 메세지 보내기
+					DataOutputStream dos = new DataOutputStream(clntSocket.getOutputStream());
+					dos.writeUTF("First my Server!!!");
+					dos.flush();
 					
 					clntSocket.close();
 					System.out.println("클라이언트 소켓 종료");
