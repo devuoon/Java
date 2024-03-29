@@ -17,7 +17,7 @@ class Customer {
             return;
         }
         money -= coffee.price;
-        System.out.printf("%s를 구입하였습니다. 잔액은 %s \n", coffee, money);
+        System.out.printf("%s를 구입하였습니다. 잔액 %s원 남았습니다. \n", coffee, money);
     }
 }
 
