@@ -15,6 +15,8 @@ public class ClientOne {
 			String receive = dis.readUTF();
 			System.out.printf("Receive message : %s\n", receive);
 			
+			socket.close();
+			System.out.println("[clnt] 연결 종료");
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
