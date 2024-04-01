@@ -14,7 +14,7 @@ public class MainClass {
 
 			@Override
 			public String getNamefacture() {
-				return "알뜰폰";
+		       		return "알뜰폰";
 			}
 
 			@Override
