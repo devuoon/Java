@@ -10,13 +10,17 @@ public class ReadExample {
 
 	public static void main(String[] args) {
 		try {
-			InputStream is = new FileInputStream("C:/Temp/test1.db");
+			InputStream is = new FileInputStream("C:/Temp/test2.db");
+			
+			byte[] data = new byte[100];
 			
 			while(true) {
-				int data  = is.read();
+				int num  = is.read(data);
+				if(num == -1) break;
 				
-				if(data == -1) break;
-				System.out.println(data);
+				for(int i =0; i<num; i++) {
+					System.out.println(data[i]);
+				}
 			}
 			
 			is.close();
