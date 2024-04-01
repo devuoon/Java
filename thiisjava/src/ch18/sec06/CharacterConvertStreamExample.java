@@ -20,8 +20,8 @@ public class CharacterConvertStreamExample {
 	public static void write(String str) throws Exception {
 		OutputStream os = new FileOutputStream("C:/Temp/test.txt");
 		Writer writer = new OutputStreamWriter(os, "UTF-8");
-		writer.write(str);
-		writer.flush();
+		writer.write(str);		// 출력스트림에 쓴다.
+		writer.flush();			// 출력스트림에 있는 데이터가 파일로 쓰여진다.
 		writer.close();
 	}
 	
