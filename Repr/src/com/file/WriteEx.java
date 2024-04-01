@@ -14,13 +14,16 @@ public class WriteEx {
 			byte a = 10;
 			byte b = 20;
 			byte c = 30;
-			
+			                                                       
 			try {
 				os.write(a);
 				os.write(b);
 				os.write(c);
 				
 				os.flush();
+				os.close();
+				
+				byte[] array = {40,50,60};
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
