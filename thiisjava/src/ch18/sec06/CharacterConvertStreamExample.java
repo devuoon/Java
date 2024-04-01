@@ -34,5 +34,4 @@ public class CharacterConvertStreamExample {
 		String str = new String(data, 0, num);
 		return str;
 	}
-
 }
